@@ -14,7 +14,7 @@ Para achar sua API Key:
 - [x] Abrir API Tester
 - [x] Pronto, sua API Key estará visível 
 
-Porém, no primeiro dia da imersão, o site da IMDB ficou instável e os intrutores criaram outros meios para seguirmos com a aula.
+Porém, no primeiro dia da imersão, o site da IMDB ficou instável e os instrutores criaram outros meios para seguirmos com a aula.
 
 Escolhi o link de API criado pela instrutora Jacqueline: https://alura-filmes.herokuapp.com/conteudos
 
