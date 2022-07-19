@@ -29,7 +29,7 @@ ________________________________________
 Tarefas extras: decorar o terminal.
 
 - Terminal - título do filme sublinhado: System.out.println("\u001b[4m" + filme.get("title") + "\u001b[0m")
-- Terminal - link do filme na cor Ciano: System.out.println("\u001b[36m" + filme.get("image") + "\u001b[37m");
+- Terminal - link da imagem do filme na cor Ciano: System.out.println("\u001b[36m" + filme.get("image") + "\u001b[37m");
 - Terminal - nota do usuário na cor Amarela: System.out.println("\u001b[33m" + filme.get("imDbRating") + "\u001b[37m");
 
 ![image](https://user-images.githubusercontent.com/108991648/179807403-5086eaa5-39ee-4e98-8d55-6a34ba1e75b0.png)
