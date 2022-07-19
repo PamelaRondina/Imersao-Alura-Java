@@ -13,3 +13,11 @@ Para achar sua API Key:
 - [x] Abrir o Profile
 - [x] Abrir API Tester
 - [x] Pronto, sua API Key estará visível 
+
+_____________________________________
+
+Tarefa realizada em conjunto com os intrutores da Alura: 
+
+![image](https://user-images.githubusercontent.com/108991648/179788056-38cace2a-a9ff-4c3d-af96-2a8daac0844b.png)
+
+
