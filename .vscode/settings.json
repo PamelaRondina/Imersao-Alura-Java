@@ -1,5 +1,10 @@
 {
     "java.project.sourcePaths": [
-        "Dia 01/src"
+        "src",
+        "."
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
     ]
 }
