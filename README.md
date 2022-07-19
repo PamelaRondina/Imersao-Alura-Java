@@ -1,3 +1,7 @@
+Olá, 😉
+
+Sou iniciante no mundo da programação e esse é o meu primeiro projeto realizado em Java. 🌟🚀
+
 # Imersão Alura Java
  
  **Aula 01 - Consumindo uma API de Filmes com Java**
