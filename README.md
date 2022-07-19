@@ -6,7 +6,7 @@ Sou iniciante no mundo da programação e esse é o meu primeiro projeto realiza
  
  **Aula 01 - Consumindo uma API de Filmes com Java**
  
-Consumir uma API do site IMDb, separarmos em conteúdos:
+Consumir uma API do site IMDb e separar em conteúdos:
 - [x] Título do Filme;
 - [x] Link da Imagem;
 - [x] Notas dos Usuários.
