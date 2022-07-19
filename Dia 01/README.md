@@ -4,7 +4,7 @@
 
 Os 250 melhores filmes de acordo com a classificação do IMDB https://www.imdb.com/chart/top/
 
-Para início, nos cadastramos no site https://imdb-api.com/ap, para em seguida, termos a chave de acesso.
+Para início, nos cadastramos no site https://imdb-api.com/api , para em seguida, termos a chave de acesso.
 
 Para achar sua API Key:
 
