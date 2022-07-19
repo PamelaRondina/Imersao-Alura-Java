@@ -20,7 +20,7 @@ Escolhi o link de API criado pela instrutora Jacqueline: https://alura-filmes.he
 
 _____________________________________
 
-Tarefa realizada em conjunto com os intrutores da Alura: 
+Tarefa realizada em conjunto com os instrutores da Alura: 
 
 ![image](https://user-images.githubusercontent.com/108991648/179788056-38cace2a-a9ff-4c3d-af96-2a8daac0844b.png)
 
