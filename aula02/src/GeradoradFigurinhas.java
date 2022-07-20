@@ -4,20 +4,21 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
-
-
 import javax.imageio.ImageIO;
-
 import java.awt.Color;
 import java.awt.Font;
 
 public class GeradoradFigurinhas {
 
-    public void cria(InputStream inputStream, String nomeArquivo) throws Exception {
+    
         // leitura da imagem
-       //InputStream inputStream = new FileInputStream(new File("entrada/filme.jpg"));
+         //InputStream inputStream = new FileInputStream(new File("entrada/filme.jpg"));
        //InputStream inputStream = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_2.jpg").openStream();
-        BufferedImage imagemOriginal = ImageIO.read(inputStream);
+       public void cria(InputStream inputStream, String nomeArquivo) throws Exception {
+        
+        BufferedImage imagemOriginal = ImageIO.read(new File("entrada/filme.jpg"));
+       
+       //BufferedImage imagemOriginal = ImageIO.read(inputStream);
 
         // cria nova imagem em memória com transparência e com tamanho novo
         int largura = imagemOriginal.getWidth();
@@ -30,23 +31,23 @@ public class GeradoradFigurinhas {
         graphics.drawImage(imagemOriginal, 0, 0, null);
 
         // configurar a fonte
-        var fonte = new Font(Font.MONOSPACED, Font.BOLD, 84);
-        graphics.setColor(Color.GRAY);
+        var fonte = new Font(Font.DIALOG, Font.BOLD, 50);
+        graphics.setColor(Color.YELLOW);
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        graphics.drawString("TOPZERA", 150, novaAltura - 100);
+        graphics.drawString("BORA ASSISTIR!", 160, novaAltura - 100);
 
     
 
         // escrever a nova imagem em um arquivo
-        ImageIO.write(novaImagem, "png", new File(nomeArquivo));
+        ImageIO.write(novaImagem, "png", new File("saida/figurinha.png"));
+         
+}
 
-    }
-
-    //public static void main(String[] args) throws Exception {
-       // var geradora = new GeradoradFigurinhas();
-       // geradora.cria();
-    //}
-
+public static void main(String[] args) throws Exception {
+    var geradora = new GeradoradFigurinhas();
+    geradora.cria(null, null);
+    
+}
 }
