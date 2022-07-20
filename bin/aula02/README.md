@@ -23,6 +23,14 @@ Olá, em breve estará atualizado!
  _________________________
 Explicando a Aula 02
 
+Criada uma classe para gerarmos as figurinhas 
+
+ 
+   
+    
+     
+
+
 No site com as informações dos filmes, localizei o link da imagem e salvei em formato **filme.jpg**, criando no repositório:
 - [x] Um diretório de **entrada**: para salvar arquivos - formato filme.*jpg*
 - [x] Um diretório de **saida**: para obter o resultado após o RUN no código - formato figurinha.*png*
@@ -35,10 +43,12 @@ Ler imagem a partir de um diretório, dois formatos:
 
 1. ![image](https://user-images.githubusercontent.com/108991648/180037371-61b7228a-529b-4214-9c95-7d2b498c4b41.png)
 
-Ler imagem a partir de uma url, neste caso, não é necessário criar os diretórios de entrada e saida.
+Ler imagem a partir de uma url, neste caso, não é necessário criar os diretórios de entrada e saída.
 1. ![image](https://user-images.githubusercontent.com/108991648/180038772-b2f26800-5681-4d23-bff7-e9741209c43b.png)
 
+Na atividade, para gerar várias imegens a partir da url, utilizei o arquivo App.Java com as seguintes modificações:
 
+![image](https://user-images.githubusercontent.com/108991648/180046057-3193f691-59d0-43f7-a34e-8d9d81a2c82d.png)
 
 
 
