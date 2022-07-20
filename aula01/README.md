@@ -22,7 +22,7 @@ _____________________________________
 
 Tarefa realizada em conjunto com os intrutores da Alura: 
 
-![image](https://user-images.githubusercontent.com/108991648/179788056-38cace2a-a9ff-4c3d-af96-2a8daac0844b.png)
+![image](https://user-images.githubusercontent.com/108991648/179908015-aa870a82-cd22-440e-b172-394006b2fd36.png)
 
 ________________________________________
 
