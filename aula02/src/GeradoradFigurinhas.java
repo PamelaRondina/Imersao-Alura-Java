@@ -23,23 +23,22 @@ public class GeradoradFigurinhas {
         // cria nova imagem em memória com transparência e com tamanho novo
         int largura = imagemOriginal.getWidth();
         int altura = imagemOriginal.getHeight();
-        int novaAltura = altura + 200;
+        int novaAltura = altura + 170;
         BufferedImage novaImagem = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
 
         // copiar a imagem original para nova imagem (em memória)
         Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
-        graphics.drawImage(imagemOriginal, 0, 0, null);
+        graphics.drawImage(imagemOriginal, 0, 200, null);
 
         // configurar a fonte
-        var fonte = new Font(Font.DIALOG, Font.BOLD, 50);
+        var fonte = new Font(Font.SANS_SERIF, Font.ITALIC, 100);
         graphics.setColor(Color.YELLOW);
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        graphics.drawString("BORA ASSISTIR!", 160, novaAltura - 100);
+        graphics.drawString("OPA! ESSE É BOM!", 240, novaAltura - 150);
 
     
-
         // escrever a nova imagem em um arquivo
         ImageIO.write(novaImagem, "png", new File("saida/figurinha.png"));
          
