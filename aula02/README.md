@@ -1,3 +1,7 @@
+# EM CONSTRUÇÃO 🔨👩‍💻🖱
+
+Olá, em breve estará atualizado! 
+
 # Imersão Alura Java
  
  **Aula 02 - Criar Figurinhas para o WhatsApp**
