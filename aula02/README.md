@@ -6,6 +6,8 @@ Olá, em breve estará atualizado!
  
  **Aula 02 - Criar Figurinhas para o WhatsApp**
  
+ Aula para gerarmos figurinhas a partir de um diretório local ou de uma url.
+ 
  Link utilizado: https://raw.githubusercontent.com/alura-cursos/imersao-java/api/TopMovies.json
 
  Nesta aula, o Visual Studio Code não realizou a leitura da imagem como no exemplo do instrutor e ao mesmo tempo não gerava erro. 
@@ -15,7 +17,9 @@ Olá, em breve estará atualizado!
  **imagem da tela do instrutor Alexandre Aquiles.
  ![image](https://user-images.githubusercontent.com/108991648/180019681-17a97773-414c-4968-9c68-0c5cc8e343fd.png)
  
- Fiquei por algum tempo tentando localizar este "erro", sem sucesso 😥! Após bater muito a cabeça, continuei acompanhando a aula e codando junto com o professor...
+ Fiquei por algum tempo tentando localizar este "erro", sem sucesso 😥! Após bater muito a cabeça, continuei acompanhando a aula e codando junto com o professor e chagamos a um resultado positivo! 😁😀
+ 
+ 
  
  
  
