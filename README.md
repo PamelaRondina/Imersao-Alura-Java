@@ -4,12 +4,15 @@ Sou iniciante no mundo da programação e esse é o meu primeiro projeto realiza
 
 # Imersão Alura Java
  
- **Aula 01 - Consumindo uma API de Filmes com Java**
+**Aula 01 - Consumindo uma API de Filmes com Java**
  
 Consumir uma API do site IMDb e separar em conteúdos:
 - [x] Título do Filme;
 - [x] Link da Imagem;
 - [x] Notas dos Usuários.
+
+**Aula 02 - Gerando Figurinhas para o WhatsApp**
+
 
 ## Instrutores
 - Jacqueline Oliveira
