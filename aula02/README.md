@@ -53,9 +53,14 @@ Na atividade, para gerar várias imagens a partir da url, utilizei o arquivo App
 
 ___________________________________
 
-**A forma que encontrei para editar as imagens 🤩**
+**A forma que encontrei para editar a imagem e o texto 🤩**
 
 Complicado sim, mas tudo bem rsrs... É o primeiro projeto!
+
+Este vai controlar onde a imagem vai permanecer acima da parede em transparência.
+![image](https://user-images.githubusercontent.com/108991648/180101509-c1d715d3-dad2-430d-9093-2c9cba1ee18e.png)
+![image](https://user-images.githubusercontent.com/108991648/180101678-e33445ce-2d8f-45b6-af3f-819dc506074e.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/108991648/180033895-b4ab4b37-a3a0-47cb-bd00-889b994e2aa0.png)
