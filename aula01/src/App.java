@@ -1,3 +1,5 @@
+package aula01.src;
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -13,8 +15,9 @@ public class App {
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-        String body = response.body()
+        String body = response.body();
         System.out.println(body);
+       
      
 
         // extrair só os dados que interessem (titulo, poster, classificação)
