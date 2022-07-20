@@ -11,8 +11,6 @@ Consumir uma API do site IMDb e separar em conteúdos:
 - [x] Link da Imagem;
 - [x] Notas dos Usuários.
 
-**Aula 02 - Gerando figurinhas para WhatsApp**
-
 ## Instrutores
 - Jacqueline Oliveira
 - Alexandre Aquiles
