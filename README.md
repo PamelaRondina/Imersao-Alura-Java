@@ -13,6 +13,9 @@ Consumir uma API do site IMDb e separar em conteúdos:
 
 **Aula 02 - Gerando Figurinhas para o WhatsApp**
 
+- [x] Gerar figurinhas a partir de uma imagem do diretório local ou de uma url;
+- [x] Enviar imagem no WhatsApp;
+- [x] Conseguir centralizar o texto criado.
 
 ## Instrutores
 - Jacqueline Oliveira
