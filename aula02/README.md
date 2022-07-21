@@ -19,7 +19,7 @@ Olá, em breve estará atualizado!
  
  Fiquei por algum tempo tentando localizar este "erro", sem sucesso 😥
  
- Continuei acompanhando a aula e codando junto com o professor e chagamos a um resultado positivo! 😁😀
+ Continuei acompanhando a aula e codando junto com o professor e chegamos a um resultado positivo! 😁😀
  
  ![image](https://user-images.githubusercontent.com/108991648/180098860-5ed8e6f8-93d7-4c02-949d-43aad211cea6.png)
  
@@ -55,7 +55,9 @@ ___________________________________
 
 **A forma que encontrei para editar a imagem e o texto 🤩**
 
-Complicado sim, mas tudo bem rsrs... É o primeiro projeto!
+*Complicado sim, mas tudo bem rsrs... É o primeiro projeto!*
+
+A partir de um diretório da rede local, com o arquivo salvo em formato .png
 
 1. Este vai controlar onde a imagem vai permanecer acima da parede em transparência.
 ![image](https://user-images.githubusercontent.com/108991648/180101509-c1d715d3-dad2-430d-9093-2c9cba1ee18e.png)
