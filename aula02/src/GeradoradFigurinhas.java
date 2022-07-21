@@ -36,7 +36,7 @@ public class GeradoradFigurinhas {
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        graphics.drawString("OPA! ESSE É BOM!", 240, novaAltura - 150);
+        graphics.drawString("**Um Clássico Perfeito**", 150, novaAltura - 150);
 
     
         // escrever a nova imagem em um arquivo
