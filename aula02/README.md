@@ -64,7 +64,7 @@ Complicado sim, mas tudo bem rsrs... É o primeiro projeto!
 2. Este vai controlar a largura (x) e altura (y) acima da parede em transparência.
 ![image](https://user-images.githubusercontent.com/108991648/180102019-355b286d-5542-4d78-8657-5bcec980fc53.png)
 
-   1. O exemplo abaixo está com (x:500) e (y: 0)
+   - Exemplo com (x:500) e (y: 0)
 
 ![image](https://user-images.githubusercontent.com/108991648/180102211-a67999cb-ab95-4eee-8e6d-d81d0cd583b4.png)
 
@@ -78,14 +78,20 @@ Fonte | Formato | Tamanho | Cor
 Font.SANS-SERIF | (Negrito) Font.ITALIC | size:100 | graphics.setColor(Color.YELLOW)
 
 
+4. Este vai controlar: texto e redirecionamento do texto, sendo (x: esquerda, centro ou direita) e (-150: altura desejada)
 
-![image](https://user-images.githubusercontent.com/108991648/180035045-71b75082-c32a-460d-8d75-214a08fc41fa.png)
+![image](https://user-images.githubusercontent.com/108991648/180104272-1b7cc9c6-d31f-402e-a19a-2781b0d35e76.png)
 
-Texto | largura | altura
+  Texto | direção | altura
 ---|---|---
-str: TOPZERA | x:0 | novaAltura-100
+"**Um Clássico Perfeito**" | x:150 | novaAltura -150
+
+   - Exemplo com (x:-50) e (y:-500)
+   
+   ![image](https://user-images.githubusercontent.com/108991648/180103594-96227148-1504-4457-a372-e94d0b60834e.png)
+
+   - Exemplo com (x:300) e (-10: para baixo)
+   
+   ![image](https://user-images.githubusercontent.com/108991648/180103853-2b31c603-a605-4af5-b22e-f6da7ce6ccba.png)
 
 
-0 a esquerda
-
-Após o RUN para verificar o resultado, clicar no diretório 
