@@ -24,7 +24,7 @@ Olá, em breve estará atualizado!
  ![image](https://user-images.githubusercontent.com/108991648/180098860-5ed8e6f8-93d7-4c02-949d-43aad211cea6.png)
  
  Imagem sendo utilizada no WhatsApp: 😍
-  
+ 
  ![image](https://user-images.githubusercontent.com/108991648/180099970-58f76db9-5f62-4037-9276-eb8ef313bd44.png)
  
  _________________________
@@ -57,9 +57,17 @@ ___________________________________
 
 Complicado sim, mas tudo bem rsrs... É o primeiro projeto!
 
-Este vai controlar onde a imagem vai permanecer acima da parede em transparência.
+1. Este vai controlar onde a imagem vai permanecer acima da parede em transparência.
 ![image](https://user-images.githubusercontent.com/108991648/180101509-c1d715d3-dad2-430d-9093-2c9cba1ee18e.png)
 ![image](https://user-images.githubusercontent.com/108991648/180101678-e33445ce-2d8f-45b6-af3f-819dc506074e.png)
+
+2. Este vai controlar a largura (x) e altura (y) acima da parede em transparência.
+![image](https://user-images.githubusercontent.com/108991648/180102019-355b286d-5542-4d78-8657-5bcec980fc53.png)
+
+   1. O exemplo abaixo está com (x:500) e (y: 0)
+
+![image](https://user-images.githubusercontent.com/108991648/180102211-a67999cb-ab95-4eee-8e6d-d81d0cd583b4.png)
+
 
 
 
