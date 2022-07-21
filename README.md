@@ -25,7 +25,7 @@ Gerar figurinhas a partir de uma imagem do diretório local ou de uma url;
 - Paulo Silveira
 _____________
  
- ## Aula 01 - Consumindo uma API de Filmes com Java**
+ # Aula 01 - Consumindo uma API de Filmes com Java
 
 Os 250 melhores filmes de acordo com a classificação do IMDB https://www.imdb.com/chart/top/
 
@@ -96,7 +96,7 @@ Branca	|	37	|	47
 
 https://www.alura.com.br/artigos/decorando-terminal-cores-emojis
 
-## Aula 02 - Criar Figurinhas para o WhatsApp**
+# Aula 02 - Criar Figurinhas para o WhatsApp
  
  Aula para gerarmos figurinhas a partir de uma imagem do diretório local ou de uma url.
  
@@ -120,7 +120,7 @@ https://www.alura.com.br/artigos/decorando-terminal-cores-emojis
  ![image](https://user-images.githubusercontent.com/108991648/180099970-58f76db9-5f62-4037-9276-eb8ef313bd44.png)
  
  _________________________
- **Diretório ou URL, de onde devo buscar meu arquivo?**
+ ## Diretório ou URL, de onde devo buscar meu arquivo?
  
 1. Criada uma classe para gerarmos as figurinhas: GeradoradFigurinhas.java
 
@@ -145,7 +145,7 @@ Na atividade, para gerar várias imagens a partir da url, utilizei o arquivo App
 
 ___________________________________
 
-**A forma que encontrei para editar a imagem e o texto 🤩**
+## A forma que encontrei para editar a imagem e o texto 🤩
 
 *Complicado sim, mas tudo bem rsrs... É o primeiro projeto!*
 
