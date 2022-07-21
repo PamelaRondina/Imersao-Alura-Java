@@ -27,10 +27,10 @@ public class App {
 
         // exibir e manipular os dados
         for (Map<String, String> filme : listaDeFilmes) {
-            
+
             String urlImagem = filme.get("image");
             String titulo = filme.get("title");
-           
+
             InputStream inputStream = new URL(urlImagem).openStream();
             String nomeArquivo = titulo + ".png";
 
