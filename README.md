@@ -96,6 +96,8 @@ Branca	|	37	|	47
 
 https://www.alura.com.br/artigos/decorando-terminal-cores-emojis
 
+____________
+
 # Aula 02 - Criar Figurinhas para o WhatsApp
  
  Aula para gerarmos figurinhas a partir de uma imagem do diretório local ou de uma url.
