@@ -1,4 +1,4 @@
-package aula02.src;
+package aula03.src;
 
 import java.net.URI;
 import java.net.http.HttpClient;
