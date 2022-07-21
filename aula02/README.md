@@ -69,13 +69,13 @@ Complicado sim, mas tudo bem rsrs... É o primeiro projeto!
 ![image](https://user-images.githubusercontent.com/108991648/180102211-a67999cb-ab95-4eee-8e6d-d81d0cd583b4.png)
 
 
+3. Este vai controlar: fonte, formato, tamanho e cor.
 
+![image](https://user-images.githubusercontent.com/108991648/180102839-2629de2d-a36d-498a-8a5a-69b9e77d5082.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180033895-b4ab4b37-a3a0-47cb-bd00-889b994e2aa0.png)
-
-Nome da Fonte | Negrito | Tamanho | Cor
+Fonte | Formato | Tamanho | Cor
 ---|---|---|---
-Font.SANS-SERIF | Font.BOLD | size:32 | graphics.setColor(Color.CYAN)
+Font.SANS-SERIF | (Negrito) Font.ITALIC | size:100 | graphics.setColor(Color.YELLOW)
 
 
 
