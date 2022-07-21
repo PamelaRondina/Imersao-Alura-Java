@@ -4,8 +4,6 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.InputStream;
-import java.net.URL;
-
 import javax.imageio.ImageIO;
 import java.awt.Color;
 import java.awt.Font;
@@ -17,7 +15,7 @@ public class GeradoradFigurinhas {
          //InputStream inputStream = new FileInputStream(new File("entrada/filme.jpg"));
        
        public void cria(InputStream inputStream, String nomeArquivo) throws Exception {
-        //InputStream inputStream = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_2.jpg").openStream();
+        //IPnputStream inputStream = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_2.jpg").openStream();
          BufferedImage imagemOriginal = ImageIO.read(inputStream); 
          
          //BufferedImage imagemOriginal = ImageIO.read(new File("entrada/filme.jpg"));
