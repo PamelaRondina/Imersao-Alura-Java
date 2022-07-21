@@ -11,7 +11,7 @@ public class App {
         //String url = "https://alura-filmes.herokuapp.com/conteudos";
         //ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
 
-        String url = "https://api.mocki.io/v2/549a5d8b/NASA-APOD";
+        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD-JamesWebbSpaceTelescope.json";
         ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
 
         var http = new ClienteHttp();
@@ -22,7 +22,7 @@ public class App {
 
         var geradora = new GeradoradFigurinhas();
         
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
 
             Conteudo conteudo = conteudos.get(i);
                        

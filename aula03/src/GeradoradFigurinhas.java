@@ -25,20 +25,20 @@ public class GeradoradFigurinhas {
         // cria nova imagem em memória com transparência e com tamanho novo
         int largura = imagemOriginal.getWidth();
         int altura = imagemOriginal.getHeight();
-        int novaAltura = altura + 170;
+        int novaAltura = altura + 200;
         BufferedImage novaImagem = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
 
         // copiar a imagem original para nova imagem (em memória)
         Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
-        graphics.drawImage(imagemOriginal, 0, 200, null);
+        graphics.drawImage(imagemOriginal, 0, 250, null);
 
         // configurar a fonte
-        var fonte = new Font(Font.SANS_SERIF, Font.ITALIC, 100);
-        graphics.setColor(Color.YELLOW);
+        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 70);
+        graphics.setColor(Color.CYAN);
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        graphics.drawString("**Um Clássico Perfeito**", 150, novaAltura - 150);
+        graphics.drawString("S.E.N.S.A.C.I.O.N.A.L", 150, novaAltura - 150);
 
     
         // escrever a nova imagem em um arquivo
