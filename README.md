@@ -19,6 +19,10 @@ Gerar figurinhas a partir de uma imagem do diretório local ou de uma url;
 - [x] Enviar imagem no WhatsApp;
 - [x] Conseguir centralizar o texto criado.
 
+**Aula 03 - Em construção**   🔨 👩‍💻 🖱 ⌨
+   
+   Em breve estará finalizado! 🥰
+
 ## Instrutores
 - Jacqueline Oliveira
 - Alexandre Aquiles
@@ -189,3 +193,11 @@ Font.SANS-SERIF | (Negrito) Font.ITALIC | size:100 | graphics.setColor(Color.YEL
    - Exemplo com (x:300 direita) e (-10: baixo)
    
    ![image](https://user-images.githubusercontent.com/108991648/180103853-2b31c603-a605-4af5-b22e-f6da7ce6ccba.png)
+   
+   ______________
+   
+   # Aula 03 - Ligando as pontas, refatoração e orientação a objetos
+   
+   ## Em construção 🔨 👩‍💻 🖱 ⌨
+   
+   Em breve estará finalizado! 🥰
