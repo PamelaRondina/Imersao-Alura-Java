@@ -19,13 +19,17 @@ Gerar figurinhas a partir de uma imagem do diretório local ou de uma url;
 - [x] Enviar imagem no WhatsApp;
 - [x] Conseguir centralizar o texto criado.
 
+**Aula 03 - Em construção**   🔨 👩‍💻 🖱 ⌨
+   
+   Em breve estará finalizado! 🥰
+
 ## Instrutores
 - Jacqueline Oliveira
 - Alexandre Aquiles
 - Paulo Silveira
 _____________
  
- ## Aula 01 - Consumindo uma API de Filmes com Java**
+ # Aula 01 - Consumindo uma API de Filmes com Java
 
 Os 250 melhores filmes de acordo com a classificação do IMDB https://www.imdb.com/chart/top/
 
@@ -96,7 +100,9 @@ Branca	|	37	|	47
 
 https://www.alura.com.br/artigos/decorando-terminal-cores-emojis
 
-## Aula 02 - Criar Figurinhas para o WhatsApp**
+____________
+
+# Aula 02 - Criar Figurinhas para o WhatsApp
  
  Aula para gerarmos figurinhas a partir de uma imagem do diretório local ou de uma url.
  
@@ -120,7 +126,7 @@ https://www.alura.com.br/artigos/decorando-terminal-cores-emojis
  ![image](https://user-images.githubusercontent.com/108991648/180099970-58f76db9-5f62-4037-9276-eb8ef313bd44.png)
  
  _________________________
- **Diretório ou URL, de onde devo buscar meu arquivo?**
+ ## Diretório ou URL, de onde devo buscar meu arquivo?
  
 1. Criada uma classe para gerarmos as figurinhas: GeradoradFigurinhas.java
 
@@ -145,7 +151,7 @@ Na atividade, para gerar várias imagens a partir da url, utilizei o arquivo App
 
 ___________________________________
 
-**A forma que encontrei para editar a imagem e o texto 🤩**
+## A forma que encontrei para editar a imagem e o texto 🤩
 
 *Complicado sim, mas tudo bem rsrs... É o primeiro projeto!*
 
@@ -180,10 +186,18 @@ Font.SANS-SERIF | (Negrito) Font.ITALIC | size:100 | graphics.setColor(Color.YEL
 ---|---|---
 "**Um Clássico Perfeito**" | x:150 | novaAltura -150
 
-   - Exemplo com (x:-50) e (y:-500)
+   - Exemplo com (x:-50 esquerda) e (y:-500 cima)
    
    ![image](https://user-images.githubusercontent.com/108991648/180103594-96227148-1504-4457-a372-e94d0b60834e.png)
 
-   - Exemplo com (x:300) e (-10: para baixo)
+   - Exemplo com (x:300 direita) e (-10: baixo)
    
    ![image](https://user-images.githubusercontent.com/108991648/180103853-2b31c603-a605-4af5-b22e-f6da7ce6ccba.png)
+   
+   ______________
+   
+   # Aula 03 - Ligando as pontas, refatoração e orientação a objetos
+   
+   ## Em construção 🔨 👩‍💻 🖱 ⌨
+   
+   Em breve estará finalizado! 🥰
