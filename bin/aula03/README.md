@@ -1,4 +1,4 @@
-# Imersão Alura Java
+# Aula 03 - Aula com foco em Orientação a Objetos, Refatoração e Encapsulamento
  
  Vamos iniciar com essa dica da *Alura* - APIs públicas: https://github.com/public-apis/public-apis
  
@@ -28,7 +28,7 @@ ______________________
 
 ## Bora codar!
 
-Seguiremos a atividade no arquivo *GeradoradFigurinhas.java* e *App.java* com o código que faz leitura da uma url [LINK DO CODIGO]
+Seguiremos a atividade no arquivo *GeradoradFigurinhas.java* e *App.java* com o código que faz leitura da uma url [https://github.com/PamelaRondina/Imersao-Alura-Java/tree/main/aula02/src]
 
 :warning: Porém, de início fizemos algumas alterações no código :warning:
 1. Leitura das 10 primeiras imagens (para não gerarmos erros nas APIs; (Pois essa imersão derrubou algumas APIs 😮).
