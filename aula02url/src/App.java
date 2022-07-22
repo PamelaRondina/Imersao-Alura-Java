@@ -1,4 +1,4 @@
-package aula03.src;
+package aula02url.src;
 
 import java.io.InputStream;
 import java.net.URI;
@@ -9,6 +9,9 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
+
+import aula02url.src.JsonParser;
+import aula02url.src.GeradoradFigurinhas;
 
 public class App {
     public static void main(String[] args) throws Exception {
