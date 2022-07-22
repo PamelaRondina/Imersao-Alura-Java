@@ -207,9 +207,7 @@ Font.SANS-SERIF | (Negrito) Font.ITALIC | size:100 | graphics.setColor(Color.YEL
  
  Vamos iniciar com essa dica da *Alura* - APIs públicas: https://github.com/public-apis/public-apis
  
- **Aula 03 - Aula com foco em Orientação a Objetos, Refatoração e Encapsulamento**
-
-> Refatorar: melhorar o código sem alterar o que ele faz!
+ > Refatorar: melhorar o código sem alterar o que ele faz!
 
 Nesta aula, que está S.E.N.S.A.C.I.O.N.A.L, vamos mesclar o conhecimento adquirido da Aula01 e Aula02:
  
