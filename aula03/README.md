@@ -1,4 +1,4 @@
-# Imersão Alura Java
+# Aula 03 - Aula com foco em Orientação a Objetos, Refatoração e Encapsulamento
  
  Vamos iniciar com essa dica da *Alura* - APIs públicas: https://github.com/public-apis/public-apis
  
