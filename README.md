@@ -19,7 +19,14 @@ Gerar figurinhas a partir de uma imagem do diretório local ou de uma url;
 - [x] Enviar imagem no WhatsApp;
 - [x] Conseguir centralizar o texto criado.
 
-**Aula 03 - Em construção**   🔨 👩‍💻 🖱 ⌨
+**Aula 03 - Aula com foco em Orientação a Objetos, Refatoração e Encapsulamento**   
+
+Gerar figurinhas a partir de uma imagem de uma url, do site da NASA e do IMDb;
+
+- [x] Consumir API do site da IMBd e da Nasa ou os demais links que os instrutores criaram;
+- [x] Criação de figurinhas para o WhatsApp com imagens incríveis da Nasa
+
+**Aula 04 - Em construção**   🔨 👩‍💻 🖱 ⌨
    
    Em breve estará finalizado! 🥰
 
