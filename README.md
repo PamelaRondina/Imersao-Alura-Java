@@ -26,9 +26,10 @@ Gerar figurinhas a partir de uma imagem de uma url, do site da NASA e do IMDb;
 - [x] Consumir API do site da IMBd e da Nasa ou os demais links que os instrutores criaram;
 - [x] Criação de figurinhas para o WhatsApp com imagens incríveis da Nasa
 
-**Aula 04 - Em construção**   🔨 👩‍💻 🖱 ⌨
-   
-   Em breve estará finalizado! 🥰
+**Aula 04 - Criando nossa própria API com Spring**
+
+Em construção**   🔨 👩‍💻 🖱 ⌨
+Em breve estará finalizado! 🥰
 
 ## Instrutores
 - Jacqueline Oliveira
@@ -375,7 +376,7 @@ voilà! Finalizamos nossa aula! 😍😍
    
    ____________
    
-   # Aula 04 - Ligando as pontas, refatoração e orientação a objetos
+   # Aula 04 - Criando nossa própria API com Spring**
    
    ## Em construção 🔨 👩‍💻 🖱 ⌨
    
