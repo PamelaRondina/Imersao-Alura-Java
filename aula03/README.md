@@ -31,7 +31,7 @@ ______________________
 Seguiremos a atividade no arquivo *GeradoradFigurinhas.java* e *App.java* com o código que faz leitura da uma url [LINK DO CODIGO]
 
 :warning: Porém, de início fizemos algumas alterações no código :warning:
-1. Leitura das 10 primeiras imagens (para não gerarmos erros nas APIs, pois essa imersão derrubou algumas APIs 😮
+1. Leitura das 10 primeiras imagens (para não gerarmos erros nas APIs; (Pois essa imersão derrubou algumas APIs 😮).
 2. Excluir os caracteres após o @ para gerarmos imagens grandes, para as url's da IMDb;
 3. Arquivo salvos no diretório de saida. No anterior, os arquivos estavam salvos no início, gerando diversos documentos na raiz do projeto. 
 
@@ -59,7 +59,7 @@ Necessária para gerarmos os atributos *titulo* e a *urlImagem*, deixaremos em *
 
 ![image](https://user-images.githubusercontent.com/108991648/180335077-3a89a3f8-9e4d-4191-9097-28c3ff4ef101.png)
 
-> Private: Restringir o acesso para que só o código desta classe acesse diretamente o atributo.
+> Private: restringir o acesso para que só o código desta classe acesse diretamente o atributo.
 
 #### Atalhos
 
@@ -67,7 +67,8 @@ Necessário para expor os atributos para os outros arquivos.
 
 - [x] Botão direito do mouse;
 - [x] Source Action;
-- [x] Generate Getters.
+- [x] Generate Getters;
+- [x] Selecionar as lacunas apresentadas.
 
 ![image](https://user-images.githubusercontent.com/108991648/180335265-30e646f5-f30e-4c0d-ac6a-51d822a99a08.png)
 ![image](https://user-images.githubusercontent.com/108991648/180335275-64bd03c1-0550-4120-bb8d-ba82dd5c3daa.png)
@@ -79,27 +80,29 @@ Código com atalho para expor os arquivos:
 #### Construtor
 
 Criar um construtor, junto com o *final* para representar estes conteudos.
-- [x] Botão direito do mouse
-- [x] Source Action 
-- [x] Generate Constructors
+- [x] Botão direito do mouse;
+- [x] Source Action;
+- [x] Generate Constructors;
+- [x] Selecionar as lacunas apresentadas.
 
 ![image](https://user-images.githubusercontent.com/108991648/180335392-98e9c19b-c84c-4715-9a51-4beac0daff1e.png)
 ![image](https://user-images.githubusercontent.com/108991648/180335405-14a2012d-e86f-4a52-84a0-e4f4a940f3cb.png)
+
 ![image](https://user-images.githubusercontent.com/108991648/180335413-e4631ef1-1160-4d96-bc7b-8ea5dea536ef.png)
 
 ### Classe: ClienteHttp
 
-Receberá um url. No arquivo *App.java* o conteúdo abaixo foi removido, e incluso na *Classe ClienteHttp*.
+Receberá uma url. No arquivo *App.java* o conteúdo abaixo foi removido, e incluso na *Classe ClienteHttp*.
 
 ![image](https://user-images.githubusercontent.com/108991648/180335517-11d236ed-1765-4060-b0ee-a8ea27d4b9c2.png)
 
-> 	Nota: para realizar todos os imports utilizar o atalho **Alt+Shift+O**
+> Nota: para realizar todos os imports utilizar o atalho **Alt+Shift+O**
 
-E também, teremos que tratar as possíveis exceções geradas para que sejam embrulhadas e incluir um *return body*, conforme abaixo:
+E também, teremos que tratar as possíveis exceções geradas para que sejam embrulhadas, criando um *try* e *catch*, e, incluir um *return body*, conforme abaixo:
 
 ![image](https://user-images.githubusercontent.com/108991648/180335585-f3bd6ada-5aac-456d-9d66-f8be3ac112b4.png)
 
-No arquivo App.java, onde removemos parte do código, vamos criar:
+No arquivo *App.java*, onde removemos parte do código, vamos criar (como demostrado abaixo) e alterar o *buscaDAdos* para *json*:
 
 ![image](https://user-images.githubusercontent.com/108991648/180335612-5c7b30ab-50f8-4dff-a733-5942c62aa8b4.png)
 
@@ -110,7 +113,7 @@ No arquivo *App.java* o conteúdo abaixo foi removido, e incluso na *Classe Extr
 
 ![image](https://user-images.githubusercontent.com/108991648/180335830-5e702a70-6586-44c6-ad1c-a1c994d7e11f.png)
 
-Criamos um *foreach* em // popular lista de conteúdos
+Criamos um *foreach* em **// popular lista de conteúdos**.
 
 ![image](https://user-images.githubusercontent.com/108991648/180335903-74bb43fc-4a3e-43e4-942b-99c907503abf.png)
 
@@ -147,19 +150,20 @@ ______________
 
 Por último, criamos uma interface, para dizer o que um objeto deve fazer.
 
->  Interface: O que um objeto deve fazer sem dizer como ele deve fazer. 
+>  Interface: o que um objeto deve fazer sem dizer como ele deve ser feito. 
 >  Quem vai dizer o que deve ser feito são as várias implementações da interface. 
 >  Na interface, tudo é público.
 
 No Extrator de cada conteúdo devemos incluir: **implements ExtratorDeConteudo**.
 
-![image](https://user-images.githubusercontent.com/108991648/180336812-5c7a5ab1-395a-4246-8c8b-853a5dc2ed37.png)
-![image](https://user-images.githubusercontent.com/108991648/180336819-e8d0b34c-cefd-4a57-b51b-0c2f6701aa43.png)
+![image](https://user-images.githubusercontent.com/108991648/180338668-3cee8458-b65a-442c-b6d3-4910c8cc62e9.png)
 
 Novamente no *App.java*, alterar de:
+
 ![image](https://user-images.githubusercontent.com/108991648/180336856-6db47b3d-a4dd-4050-b90b-fe1568cb2729.png)
 
 Para:
+
 ![image](https://user-images.githubusercontent.com/108991648/180336874-51ef6d41-ed8e-4124-8c04-7ac36f702fc0.png)
 
 voilà! Finalizamos nossa aula! 😍😍
