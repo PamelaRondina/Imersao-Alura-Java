@@ -5,7 +5,7 @@ Nesta aula, criaremos nossa própria API e Web Service, podendo ser consumida co
 
 Vamos misturar diversos Frameworks e bibliotecas, como Spring, Spring Boot, Maven, PostMan e MongoDB.
 
-##Instalações e Registros Necessários
+## Instalações e Registros Necessários
 
 :warning: Antes do *#partiucodar* temos que fazer algumas instalações e registros :warning:
 
@@ -14,7 +14,7 @@ Vamos misturar diversos Frameworks e bibliotecas, como Spring, Spring Boot, Mave
 - PostMan
 
 
-###Spring
+### Spring
 
 > Afinal, o que são Springs? 
 São Frameworks Open Source, utilizados para agilizar o processo de codificação.
@@ -77,11 +77,11 @@ Após baixar o PostMan Desktop:
 
 ![image](https://user-images.githubusercontent.com/108991648/180624914-f359fbb6-8d20-4634-ac87-babd30aa7094.png)
 
-E PostMan retorna exatamente o que estava no navegador
+PostMan retorna exatamente o que estava no navegador
 
 ![image](https://user-images.githubusercontent.com/108991648/180625003-92f7e435-2289-41be-af5d-5dd228ddbb8d.png)
 
-##:alarm_clock: Hora de Codar! :alarm_clock:
+## :alarm_clock: Hora de Codar! :alarm_clock:
 
 Faremos uma API das linguagens mais populares das empresas que contratam a Alura. Vamos ranquear por uso, incluir imagem e popularidade.
 
@@ -130,7 +130,7 @@ Voltaremos no arquivo *LinguagemController.java* para adicionar as linhas: 10, 1
 
 ![image](https://user-images.githubusercontent.com/108991648/180659601-01cb7932-dd27-43ff-b9d8-49731bf6cde1.png)
 
-####Repositório de Imagens
+#### Repositório de Imagens
 Vamos para o [repositório no GitHub](https://github.com/abrahamcalf/programming-languages-logos/tree/master/src) com imagens das linguagens de programação. 
 
 - [x] Escolher uma linguagem
@@ -168,7 +168,7 @@ Após o RUN, os arquivos estarão na pasta de saída, conforme na aula anterior 
 
 ![image](https://user-images.githubusercontent.com/108991648/180660377-21da8935-7936-4d45-b039-39550cfbeec7.png)
 
-###Retornado ao MondoDB
+### Retornado ao MondoDB
 
 No repositório a partir do MongoDB (Banco de Dados):
 
@@ -321,7 +321,7 @@ Isso é tudo pessoal! :blush:
 _________________
 
 
-######Dica Boa da Alura! 
+###### Dica Boa da Alura! 
 [Stickers Dev: Aluraverso no WhatsApp e Telegram](https://www.alura.com.br/artigos/stickers-dev-aluraverso-whatsapp-telegram)
 
  
