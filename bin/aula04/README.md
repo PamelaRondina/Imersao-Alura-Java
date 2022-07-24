@@ -1,176 +1,327 @@
-# Aula 03 - Aula com foco em Orientação a Objetos, Refatoração e Encapsulamento
- 
- Vamos iniciar com essa dica da *Alura* - APIs públicas: https://github.com/public-apis/public-apis
- 
- **Aula 03 - Aula com foco em Orientação a Objetos, Refatoração e Encapsulamento**
+# Aula 04 - Criando Nossa Própria API Com Spring 
 
-> Refatorar: melhorar o código sem alterar o que ele faz!
 
-Nesta aula, que está S.E.N.S.A.C.I.O.N.A.L, vamos mesclar o conhecimento adquirido da Aula01 e Aula02:
- 
-- Consumo de API do site da IMBd, ou os demais links que os instrutores criaram;
-- Criação de figurinhas para o WhatsApp.
+Nesta aula, criaremos nossa própria API e Web Service, podendo ser consumida com todo o código que já escrevemos, além disso, vamos gerar mais figurinhas baseado neste novo Web Service! Que maneiro não?! :grin:
 
-__________________________
+Vamos misturar diversos Frameworks e bibliotecas, como Spring, Spring Boot, Maven, PostMan e MongoDB.
 
-## E o que faremos nesta aula?
+##Instalações e Registros Necessários
 
-A ideia é ter um código que consuma com facilidade uma nova API, e a API escolhida foi da *NASA*!!
+:warning: Antes do *#partiucodar* temos que fazer algumas instalações e registros :warning:
 
-### S.E.N.S.A.C.I.O.N.A.L! Bora gerar figurinhas desse e dos demais universos?! 🪐🚀👽
+- Spring
+- MongoDB (Banco de Dados)
+- PostMan
 
-API da NASA, com imagens incríveis do James Webb:
-https://api.mocki.io/v2/549a5d8b/NASA-APOD-JamesWebbSpaceTelescope
 
-![image](https://user-images.githubusercontent.com/108991648/180332914-ad21a623-a023-4c1c-ac32-8fa57512b65c.png)
-______________________
+###Spring
 
+> Afinal, o que são Springs? 
+São Frameworks Open Source, utilizados para agilizar o processo de codificação.
 
-## Bora codar!
+Acessar [Star.Spring](https://start.spring.io/) e seguir os passos abaixo:
+- [x] Project: Mavem Project
+- [x] Language: Java
+- [x] Spring Boot: 3.0.0 (M4)
+- [x] Group: br.com.alura 
+- [x] Artifact: nome-do-projeto
+- [x] Description: descrição-do-projeto
+- [x] Packaging: Jar
+- [x] Java: 17
+- [x] Em *ADD DEPENDENCIES* adicionar *Spring Web*
+- [x] Clicar em Generate
 
-Seguiremos a atividade no arquivo *GeradoradFigurinhas.java* e *App.java* com o código que faz leitura da uma url [https://github.com/PamelaRondina/Imersao-Alura-Java/tree/main/aula02/src]
+![image](https://user-images.githubusercontent.com/108991648/180626042-94c12c69-580d-452a-a95e-84e32020f6a0.png)
 
-:warning: Porém, de início fizemos algumas alterações no código :warning:
-1. Leitura das 10 primeiras imagens (para não gerarmos erros nas APIs; (Pois essa imersão derrubou algumas APIs 😮).
-2. Excluir os caracteres após o @ para gerarmos imagens grandes, para as url's da IMDb;
-3. Arquivo salvos no diretório de saida. No anterior, os arquivos estavam salvos no início, gerando diversos documentos na raiz do projeto. 
+Na pasta de Downloads teremos o arquivo relacionado em .zip, em seguida, devemos extrair o conteúdo do diretório e iniciá-lo no Visual Studio Code [VSC] (abrir com botão direito do mouse!), charemos de Projeto: Linguagens-API.
 
+![image](https://user-images.githubusercontent.com/108991648/180658378-fd7e1057-bd0d-4c34-a6a4-e18e3606e491.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180333451-c76ce99b-fd2f-4eba-bb1b-647551ca35e2.png)
+> Iniciaremos um novo projeto e mais tarde vamos mesclar com os códigos das aulas anteriores.
 
-4. listaDeFilmes alterado para ListaDeConteudos.
+### Aplicação MongoDB
+De início, precisamos realizar o registro no [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register), após clicar em Create.
 
-![image](https://user-images.githubusercontent.com/108991648/180285845-d7434174-a0b0-4fd7-b681-064bdd3206c0.png)
+1.	Escolher a forma de autenticação: senha ou certificado. 
 
-5. filme alterado para conteúdo.
+![image](https://user-images.githubusercontent.com/108991648/180658555-59ca9e32-e090-4848-b834-5f07f68e2c4d.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180334280-3c9363d2-cb74-4d3f-84b4-fbcf8dfa2f7f.png)
+2.	Escolher a origem de onde você gostaria de se conectar:
+- My Local Environment: conectar do computador pessoal;
+- Cloud Environment: conectar de um data center ou de Cloud pública, por exemplo, AWS.
 
-6. Manipulação de dados não será a partir de uma imagem, e sim de uma url.
+Optando pelo *My Local Environment*:
+- [x] Descobrir o nº do [IP](https://meuip.com.br/);
+- [x] Incluir a descrição, opcional
+- [x] Clicar em *Add Entry* e *Finish and Close*
 
-![image](https://user-images.githubusercontent.com/108991648/180334301-e8dcadba-f378-4984-822e-e5cc8b225215.png)
-_________________________
 
-## Criação de Classes
+![image](https://user-images.githubusercontent.com/108991648/180658759-55b279f5-dcf4-4bd5-b5f8-e64ff7ea5996.png)
 
-### Classe: Conteudo
 
-Necessária para gerarmos os atributos *titulo* e a *urlImagem*, deixaremos em **private**, pois quando incluímos apenas **public** todos os outros arquivos podem chamar.
+### Aplicação PostMan
 
-![image](https://user-images.githubusercontent.com/108991648/180335077-3a89a3f8-9e4d-4191-9097-28c3ff4ef101.png)
+> PostMan: algumas das possibilidades desta aplicação são navegar e explorar diversas API’s
 
-> Private: restringir o acesso para que só o código desta classe acesse diretamente o atributo.
+Realizar o registro em [PostMan](), e baixar o [PostMan Desktop]() (pois nossa aplicação está no localhost) 
 
-#### Atalhos
+Após baixar o PostMan Desktop:
+- [x] Clicar *My Workspace*
+- [x] Clicar **+**
 
-Necessário para expor os atributos para os outros arquivos.
+![image](https://user-images.githubusercontent.com/108991648/180624805-07b34232-bef3-4c38-8fcf-76967b2a5d07.png)
 
-- [x] Botão direito do mouse;
-- [x] Source Action;
-- [x] Generate Getters;
-- [x] Selecionar as lacunas apresentadas.
+**Não faremos um GET e sim um POST, mas no final desta aula**
+- [x] Apenas para visualizar o resultado! Em *GET* adicionar o link do localhost: <http://localhost:8080/linguagens>
+- [x] Clicar *Send* 
 
-![image](https://user-images.githubusercontent.com/108991648/180335265-30e646f5-f30e-4c0d-ac6a-51d822a99a08.png)
-![image](https://user-images.githubusercontent.com/108991648/180335275-64bd03c1-0550-4120-bb8d-ba82dd5c3daa.png)
+![image](https://user-images.githubusercontent.com/108991648/180624914-f359fbb6-8d20-4634-ac87-babd30aa7094.png)
 
-Código com atalho para expor os arquivos:
+E PostMan retorna exatamente o que estava no navegador
 
-![image](https://user-images.githubusercontent.com/108991648/180335316-5a988c47-9145-4f71-a5d8-f68495ba1b88.png)
+![image](https://user-images.githubusercontent.com/108991648/180625003-92f7e435-2289-41be-af5d-5dd228ddbb8d.png)
 
-#### Construtor
+##:alarm_clock: Hora de Codar! :alarm_clock:
 
-Criar um construtor, junto com o *final* para representar estes conteudos.
-- [x] Botão direito do mouse;
-- [x] Source Action;
-- [x] Generate Constructors;
-- [x] Selecionar as lacunas apresentadas.
+Faremos uma API das linguagens mais populares das empresas que contratam a Alura. Vamos ranquear por uso, incluir imagem e popularidade.
 
-![image](https://user-images.githubusercontent.com/108991648/180335392-98e9c19b-c84c-4715-9a51-4beac0daff1e.png)
-![image](https://user-images.githubusercontent.com/108991648/180335405-14a2012d-e86f-4a52-84a0-e4f4a940f3cb.png)
+Voltar ao VSC, abrir o projeto *Linguagens-API*:
 
-![image](https://user-images.githubusercontent.com/108991648/180335413-e4631ef1-1160-4d96-bc7b-8ea5dea536ef.png)
+- [x] Criar uma classe *LinguagemController*
+- [x] Incluir a anotação `@RestController` e `@GetMapping`
+- [x] Incluir `return “Oi, Java!”` 
+- [x] Atentar-se aos `import`
 
-### Classe: ClienteHttp
+![image](https://user-images.githubusercontent.com/108991648/180659211-33ba4c3c-7299-4b31-8897-6850214335df.png)
 
-Receberá uma url. No arquivo *App.java* o conteúdo abaixo foi removido, e incluso na *Classe ClienteHttp*.
+- [x] Alterar `“path”` para `“/linguagem-preferida”`
+- [x] Alterar `SomeData` para `String` 
+- [x] Alterar `getMethodName` para `processaLinguagemPreferida` 
+- [x] Deletar `*@RequestParam String param*`
+- [x] Deletar `import org.springframework.web.bind.annotation.RequestParam`;
 
-![image](https://user-images.githubusercontent.com/108991648/180335517-11d236ed-1765-4060-b0ee-a8ea27d4b9c2.png)
+```Java
+@GetMapping(value="/linguagem-preferida")
+public String processaLinguagemPreferida() {
+    return "Oi, Java!";
+}
+```
 
-> Nota: para realizar todos os imports utilizar o atalho **Alt+Shift+O**
+Após o RUN, no navegador escrever: <localhot:8080/linguagem-prefereida> e o resultado será *Oi, Java!* :smile:
 
-E também, teremos que tratar as possíveis exceções geradas para que sejam embrulhadas, criando um *try* e *catch*, e, incluir um *return body*, conforme abaixo:
+![image](https://user-images.githubusercontent.com/108991648/180659399-2a4fcf00-58e8-4f5a-a32b-2adb014455da.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180335585-f3bd6ada-5aac-456d-9d66-f8be3ac112b4.png)
+- [x] Criar um nova Classe *Linguagem*
+- [x] Criar atributos privados `String title` e `String image`
+- [x] Criar `private int ranking`
 
-No arquivo *App.java*, onde removemos parte do código, vamos criar (como demostrado abaixo) e alterar o *buscaDAdos* para *json*:
+![image](https://user-images.githubusercontent.com/108991648/180659480-800fa0ab-1700-41e4-b8d5-a1005e2a4bd4.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180335612-5c7b30ab-50f8-4dff-a733-5942c62aa8b4.png)
+Conforme a aula03 [criar os atalhos](https://github.com/PamelaRondina/Imersao-Alura-Java#atalhos.)
 
-### Classe: ExtratorDeConteudoDaNasa
+- [X] Criar atalho: *Generate Getters* 
+- [x] Criar atalho: *Generate Contructors*
 
-A lista de Maps será transformada em Lista de Conteudos. 
-No arquivo *App.java* o conteúdo abaixo foi removido, e incluso na *Classe ExtratorDeConteudosDaNasa*, onde a *listaDeConteudos* foi alterada para *listadeAtributos*.
+Teremos o resultado:
+![image](https://user-images.githubusercontent.com/108991648/180659559-ce37c98d-abfd-4c13-a87a-949cd7752c0c.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180335830-5e702a70-6586-44c6-ad1c-a1c994d7e11f.png)
+Voltaremos no arquivo *LinguagemController.java* para adicionar as linhas: 10, 11, 12 e 13.
+> Fazer o `import java.util.List;`
 
-Criamos um *foreach* em **// popular lista de conteúdos**.
+![image](https://user-images.githubusercontent.com/108991648/180659601-01cb7932-dd27-43ff-b9d8-49731bf6cde1.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180335903-74bb43fc-4a3e-43e4-942b-99c907503abf.png)
+####Repositório de Imagens
+Vamos para o [repositório no GitHub](https://github.com/abrahamcalf/programming-languages-logos/tree/master/src) com imagens das linguagens de programação. 
 
-### Classe: ExtratorDeConteudoDoIMDB
+- [x] Escolher uma linguagem
+- [x] Selecionar o arquivo *256x256.png* 
+- [x] Abrir a imagem 
+- [x] Clicar na imagem para gerar a url em outra janela
+- [x] Copiar nova url
 
-Serão quase os mesmos dados da classe da Nasa, com pequenas alterações:
+Retornando ao código em *LinguagemController.java* colar a url na `lista/image`. Incluímos uma nova linha e repetimos os passos anteriores, neste exemplo, fiz a cópia da url da imagem de **Java** e **Python**
 
-- Em *url* --> será *image*;
-- E do *App.java* será adicionado *.replaceAll("(@+)(.*).jpg$","$1.jpg")*.
+![image](https://user-images.githubusercontent.com/108991648/180659858-16a186f3-d6bd-4903-a398-cdef56468b75.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180336022-509835e0-1c1c-43d6-9490-34f34f365a23.png)
+Voltando para o arquivo *LinguagemController*
+- [x] Comentar ou deletar as linhas 16, 17, 18 ou 19, 
 
-Continuando as alterações, seguiremos para o *App.java*, na seção **// exibir e manipular os dados**, para incluir e excluir informações, conforme abaixo:
+> Não serão mais úteis, utilizamos apenas para compreender o primeiro RUN da atividade.
 
-![image](https://user-images.githubusercontent.com/108991648/180336156-9b62a039-131f-462b-9210-4ee965c4c6cd.png)
+- [x] Adicionar as linhas 21 até 24.
 
-_____________
+![image](https://user-images.githubusercontent.com/108991648/180660144-c7198778-3f3e-4562-b158-4aad7759dab5.png)
 
-## E agora, temos 02 formas de analisar?!
+Após o RUN, no navegador escrever: <localhot:8080/linguagens> e o resultado será um **json**
 
-E é isso mesmo!! Podemos optar pela análise da API da NASA ou do IMDb. Vamos compreender como será feito:
+![image](https://user-images.githubusercontent.com/108991648/180660076-ac917f0d-fcd5-49f9-9ad9-f53967daedbb.png)
 
-Para selecionar qual API devemos analisar, basta incluir // nas linhas de *String* e *ExtratorDeConteudos* no qual NÃO for utilizar:
+### Uhull!  Agora vamos mesclar o código atual com os anteriores :clap::clap::clap:
 
-![image](https://user-images.githubusercontent.com/108991648/180336426-3b8e7549-26c3-4f10-a041-e3d18419968d.png)
+Vamos abrir no terminal o projeto anterior, no arquivo *App.java* vamos adicionar as linhas 17 e 18  para analisarmos uma nova API.
 
-Fizemos o RUN em ambas as API's e o resultado foi positivo! 🤩🤩
+![image](https://user-images.githubusercontent.com/108991648/180660309-3a823550-0b0c-42a1-ae45-64d270c5df08.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180336562-092c7f5a-1308-49d5-9556-5155979593b1.png)
+Após o RUN, os arquivos estarão na pasta de saída, conforme na aula anterior e o resultado será:
 
-______________
+![image](https://user-images.githubusercontent.com/108991648/180660349-464c061f-5e99-4b3c-86c1-285e729e1883.png)
 
-## Para encerrar, criação da Interface
+![image](https://user-images.githubusercontent.com/108991648/180660377-21da8935-7936-4d45-b039-39550cfbeec7.png)
 
-Por último, criamos uma interface, para dizer o que um objeto deve fazer.
+###Retornado ao MondoDB
 
->  Interface: o que um objeto deve fazer sem dizer como ele deve ser feito. 
->  Quem vai dizer o que deve ser feito são as várias implementações da interface. 
->  Na interface, tudo é público.
+No repositório a partir do MongoDB (Banco de Dados):
 
-No Extrator de cada conteúdo devemos incluir: **implements ExtratorDeConteudo**.
+- Clicar em **Project: 0**
 
-![image](https://user-images.githubusercontent.com/108991648/180338668-3cee8458-b65a-442c-b6d3-4910c8cc62e9.png)
+![image](https://user-images.githubusercontent.com/108991648/180660555-fec2c8f6-d3cb-44db-8a4e-f25135d15399.png)
 
-Novamente no *App.java*, alterar de:
+* Clicar em **View All Projects**
 
-![image](https://user-images.githubusercontent.com/108991648/180336856-6db47b3d-a4dd-4050-b90b-fe1568cb2729.png)
+![image](https://user-images.githubusercontent.com/108991648/180660575-08e3fdd5-4e71-4961-9ef6-45a344d81a98.png)
 
-Para:
+- Clicar em **Project0**
 
-![image](https://user-images.githubusercontent.com/108991648/180336874-51ef6d41-ed8e-4124-8c04-7ac36f702fc0.png)
+![image](https://user-images.githubusercontent.com/108991648/180660602-3fd4b4aa-1d9c-49e0-ba53-9192f3adf689.png)
 
-voilà! Finalizamos nossa aula! 😍😍
+- Clicar em **Browse Collections**
 
-____________
+![image](https://user-images.githubusercontent.com/108991648/180660614-67b3f71c-e6f4-4cbb-9eef-1c0ddd68b46d.png)
 
+- Clicar em **Add My Own Data** e na próxima janela adicionar os nomes que preferir, e clicar **Create**
 
+![image](https://user-images.githubusercontent.com/108991648/180660648-6471db2c-41c3-47fd-a3fb-e5d606880b9b.png)
 
+> Dentro de uma coleção temos documentos e o MongoDB é um banco que armazena documentos
+
+- Clicar em **Insert Document**
+
+![image](https://user-images.githubusercontent.com/108991648/180660732-776a0672-d38c-4af7-a17b-9afde9010345.png)
+
+Em Insert to Collection, vamos uadicionar a url de uma imagens das linguagens de programação [Repositório GitHub](https://github.com/abrahamcalf/programming-languages-logos/tree/master/src)
+
+- [x] Clicar nas {} (chaves)
+- [x] Adicionar atributos: title, image e ranking
+    - Na imagem, em formato **256x256.png**, incluir a url
+- [x] Clicar em Insert
+
+![image](https://user-images.githubusercontent.com/108991648/180660913-b3cc1869-6404-41f1-b117-283f3f1c8d89.png)
+
+> Note que temos 01 (um) documento criado
+
+![image](https://user-images.githubusercontent.com/108991648/180660958-b2d37007-f4f3-4af6-83c0-cdd71ad06225.png)
+
+Vamos criar mais 2 (dois) documentos, passaremos as informações criadas no início desta aula para o MongoDB
+
+> Atenção no momento de copiar o código não incluir as {}.
+
+![image](https://user-images.githubusercontent.com/108991648/180661057-48b4be8c-3b2b-4235-8107-8a89ab465f41.png)
+![image](https://user-images.githubusercontent.com/108991648/180661070-dd335f6b-0136-4d85-8884-11629069f7f3.png)
+
+Com isso, teremos 3 (três) documentos dentro deste banco de dados, note que em cada item possui um **id**.
+
+![image](https://user-images.githubusercontent.com/108991648/180661088-7d1166f2-2ed4-4444-bceb-65d9b962796f.png)
+
+Vamos criar a String de conexão, clicar em:
+- [x] *Overview*
+- [x] *Connect*
+- [x] *Connect your application*  
+
+![image](https://user-images.githubusercontent.com/108991648/180661138-51f665dd-3200-44f6-a068-bf9269bf120f.png)
+
+![image](https://user-images.githubusercontent.com/108991648/180661149-ec2a0a3a-a904-47d4-822b-86f1a7341dde.png)
+
+Precisaremos adicionar uma dependência no projeto.
+
+- [x] No VSC
+- [x] No projeto *Linguagens-api*
+- [x] Arquivo *pom.xml* 
+- [x] Adicionar as linhas 25 até 28 
+- [x] Clicar em *Always* (no canto inferior direito da tela)
+
+![image](https://user-images.githubusercontent.com/108991648/180661262-7e2defb3-caf9-43bc-8e15-cc684ddf1e75.png)
+
+No arquivo *application.properties* dentro do *main/resources* vamos colar nosso *link bem legal*, que é o valor da propriedade!
+
+> Resources são os demais arquivos estáticos, e outros, que não são Java
+
+- [x] Incluir: `spring.data.mongodb.uri`
+- [x] Incluir o **Link bem legal**
+- [x] Senha (criado no site do MongoDb), deletar as **<>**
+- [x] aluraDb (que é o banco de dados)
+
+![image](https://user-images.githubusercontent.com/108991648/180661325-f26922a2-3d20-4e32-8128-43183402f8ed.png)
+
+No arquivo *Linguagem.java* incluir as linhas 6, 9, 10, 15, 16 e 17.
+
+![image](https://user-images.githubusercontent.com/108991648/180661350-837703f6-95fb-485a-90cb-fdbb34063c5b.png)
+
+> Fazer o `import org.springframework.data.annotation.Id;`
+> Fazer o `import org.springframework.data.mongodb.core.mapping.Document;`
+
+- [x] Criar uma classe *LinguagemRepository* para buscar os dados
+- [x] Alterar para interface 
+
+Apenas para visualizar o código! em *MongoRepository*, clicar com `Ctrl+Clique` (botão esquerdo do mouse)
+
+![image](https://user-images.githubusercontent.com/108991648/180661368-662fb21b-7611-4b64-82e0-c6f2ed0f009b.png)
+
+No arquivo *LinguagemController.java*
+- [x] Deletar ou comentar as linhas 11 até 15
+- [x] Adicionar as linhas 22 até 30
+
+> lembrete: as linhas 17 até 20 foram desconsideradas em um momento anterior desta aula
+
+![image](https://user-images.githubusercontent.com/108991648/180661395-44c5b7c2-b400-4994-b4e8-485d02fec003.png)
+
+Após o RUN, o resultado será 😊 
+
+![image](https://user-images.githubusercontent.com/108991648/180661410-5ea9fe73-0134-4170-b29c-6a4c6691f1b2.png)
+
+### Retornando ao PostMan
+
+Faremos um **POST**
+
+- [x] Clicar **+**
+- [x] Em *GET* alterar para *POST*
+- [x] Em *POST* adicionar o link do localhost [http://localhost:8080/linguagens]
+- [X] Em *Body* selecionar *raw*, e em *Text* alterar para *JSON*
+
+Faremos o mesmo que no início da atividade, incluir: title, image e ranking. [Repositório do GitHub com imagens das linguagens de programação](https://github.com/abrahamcalf/programming-languages-logos)
+
+![image](https://user-images.githubusercontent.com/108991648/180625317-c00ae0a8-e5d7-484a-8f06-e0ab3057817e.png)
+
+Voltaremos no VSC, no arquivo *LinguagemController.java* para adicionar as linhas 32 até 35, criando uma variável para `save` = `LinguagemSalva`
+
+![image](https://user-images.githubusercontent.com/108991648/180625497-b367e57a-b7aa-4241-b5ae-18d0885227bf.png)
+
+> Fazer o `import org.springframework.web.bind.annotation.PostMapping;`
+
+Após a variável adicionar `return LinguagemSalva` na linha 35
+
+![image](https://user-images.githubusercontent.com/108991648/180625556-c04ae360-d3e8-4477-b2e6-9f958117cffe.png)
+
+Após o RUN, voltaremos no PostMan, clicar em **Send**. Tendo a resposta **200 OK** o resultado foi positivo :smile:
+
+![image](https://user-images.githubusercontent.com/108991648/180625663-db566b00-64ec-4ecf-8677-34c2096989e8.png)
+
+Voltaremos no MongoDB, clicar em *Refresh* e teremos 04 resultados! :smile:
+
+![image](https://user-images.githubusercontent.com/108991648/180625744-f6ee22d2-e910-4b64-8e08-54f7e5a84582.png)
+
+E, por último, um detalhe sobre o MongoDB para conseguirmos acessar de qualquer lugar:
+
+- [x] Em *Network Acces*
+- [x] Em *Edit*
+- [x] Editar para o IP Geral: o acesso para o Ip Geral 0.0.0.0/0
+
+![image](https://user-images.githubusercontent.com/108991648/180625842-0b05f9bb-575f-4019-85f3-804cd65588d0.png)
+
+Isso é tudo pessoal! :blush:
+_________________
+
+
+######Dica Boa da Alura! 
+[Stickers Dev: Aluraverso no WhatsApp e Telegram](https://www.alura.com.br/artigos/stickers-dev-aluraverso-whatsapp-telegram)
 
  

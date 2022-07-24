@@ -25,7 +25,7 @@ public class GeradoradFigurinhas {
         // cria nova imagem em memória com transparência e com tamanho novo
         int largura = imagemOriginal.getWidth();
         int altura = imagemOriginal.getHeight();
-        int novaAltura = altura + 200;
+        int novaAltura = altura + 500;
         BufferedImage novaImagem = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
 
         // copiar a imagem original para nova imagem (em memória)
@@ -33,12 +33,12 @@ public class GeradoradFigurinhas {
         graphics.drawImage(imagemOriginal, 0, 250, null);
 
         // configurar a fonte
-        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 70);
-        graphics.setColor(Color.CYAN);
+        var fonte = new Font(Font.SANS_SERIF, Font.BOLD, 60);
+        graphics.setColor(Color.magenta);
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        graphics.drawString("S.E.N.S.A.C.I.O.N.A.L", 150, novaAltura - 150);
+        graphics.drawString("TOP D+", 25, novaAltura - 200);
 
     
         // escrever a nova imagem em um arquivo
