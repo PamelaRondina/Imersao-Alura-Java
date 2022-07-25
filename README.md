@@ -38,8 +38,14 @@ Criar nossa própria API e Web Service, podendo ser consumida com todo o código
 
 **Aula 05 - Publicando nossa API no Cloud**
 
-Em construção**   🔨 👩‍💻 🖱 ⌨
-Em breve estará finalizado! 🥰
+Colocar nossa aplicação no ar, fazer um Deploy
+
+- [x] Acesso ao Heroku
+- [x] Aplicação na nuvem
+- [x] gerar figurinhas a partir do conteúdo desta API.
+
+_____________________
+
 ## Instrutores
 - Jacqueline Oliveira
 - Alexandre Aquiles
