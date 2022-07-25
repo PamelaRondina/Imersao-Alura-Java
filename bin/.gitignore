@@ -1,5 +1,7 @@
 # Compiled class file
 
+# Arquivo class do java (programa compilado)
+*.class
 
 # Log file
 *.log
