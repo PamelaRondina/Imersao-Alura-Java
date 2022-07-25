@@ -7,11 +7,16 @@ Nesta aula, vamos colocar nossa aplicação no ar, ou melhor dizendo, fazer o fa
 Vamos incluir a aplicação na nuvem por um mecanismo chamado Heroku.
 :EMOJI AR| CONEXAO | SINTOMNIA!
 
- incluir nossa aplicação e fazer um deploy colocar no ar, vamos por na nuvem usando um mecanismo chamado Heroku
+ ## Título
 
- Faremos também novas funcionalidaes na API
+ Abrir o projeto *Linguagens-API*, ir em *mvnw*
+
+![image](https://user-images.githubusercontent.com/108991648/180672559-c45a33fb-16ca-4da8-9d7a-06c5271e3fb6.png)
+
 
 ## Instalações e Registros Necessários
+
+
 
 ### Heroku
 
