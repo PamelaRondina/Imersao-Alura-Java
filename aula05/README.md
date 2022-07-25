@@ -34,9 +34,9 @@ No final da janela aberta, teremos as informações de instalação:
 ![image](https://user-images.githubusercontent.com/108991648/180814120-28397343-d674-4233-87d6-a17e99a22fa9.png)
 
 
- ## Título
+ ## Chegando ao final do projeto 	:clap:	:clap:	
 
- Abrir o projeto *Linguagens-API*, ir em *mvnw*
+ Abrir o projeto *Linguagens-API*, ir no arquivo *mvnw*
 
 ![image](https://user-images.githubusercontent.com/108991648/180672559-c45a33fb-16ca-4da8-9d7a-06c5271e3fb6.png)
 
@@ -108,104 +108,117 @@ Após executado, o retorno foi positivo :smile:
 
 O mesmo erro ocorreu no terminal do instrutor, porém, ele solucionou o problema de uma outra forma:
 
+No projeto *Linguagens-api*, incluir na raiz do projeto um aqruivo **system.properties**
+
+![image](https://user-images.githubusercontent.com/108991648/180844095-04ef7cd0-f3da-4e7c-96cf-9819727db596.png)
+
+
 ## Rodar a aplicação pelo GIT
 
-> Utilizo o **Git Bash**, com comandos Linux
+> Utilizei o **Git CMD**
 
-Pelo Git Bash, vamos descobrir quais são as versões:
+Pelo Git, vamos descobrir quais são as versões:
 
 * Versão: Git
 ```bash
-pamela@teste MINGW64 ~/desktop/linguagens-api
-$ git --version
+C:\Users\pamela>git --version
 git version 2.37.1.windows.1
 ```
 * Versão: Heroku
 
 ```bash
-pamela@teste MINGW64 ~/desktop/linguagens-api
-$ heroku --version
- »   https://dashboard.heroku.com/terms-of-service
+C:\Users\pamela>heroku --version
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
 heroku/7.53.0 win32-x64 node-v12.21.0
 ```
-Pelo Git Bash, vamos entrar no diretório onde está o código.
+Pelo Git, vamos entrar no diretório onde está o código.
 
 ```bash
-pamela@test MINGW64 /
-$ cd ~
 
-pamela@teste MINGW64 ~
-$ cd desktop/
+C:\Users\pamela> cd Desktop
 
-pamela@teste MINGW64 ~/desktop
-$ ls
-'Pessoa 1 - Chrome.lnk'*   desktop.ini
- Postman.lnk*              linguagens-api/
-'Project Zomboid.url'      linguagens-api-0.0.1-SNAPSHOT.jar
-
-pamela@teste MINGW64 ~/desktop
-$ cd linguagens-api
-
-pamela@teste MINGW64 ~/desktop/linguagens-api
-$ ls
-HELP.md  mvnw*  mvnw.cmd  pom.xml  src/  target/
+C:\Users\pamela\Desktop> cd linguagens-api
 ```
+Conforme instruções do site do [Heroku CLI](https://dashboard.heroku.com/apps/pamela-linguagens-api/deploy/heroku-git), primeira parte:
 
-Conforme instruções do site do [Heroku CLI](https://dashboard.heroku.com/apps/pamela-linguagens-api/deploy/heroku-git):
-
-![image](https://user-images.githubusercontent.com/108991648/180833487-ab3159c6-9d2d-4ac6-af9a-46cb12115091.png)
-
-
+![image](https://user-images.githubusercontent.com/108991648/180851281-2475496c-ae57-42c3-bd4d-912bc8bb062a.png)
 
 - [x] Rodar `$ heroku login`
 - [x] Pressionar qualquer tecla
 - [x] O navegador será aberto
-- [x] Será gerado uma senha
+- [x] Clicar Será gerado uma senha
 
-OPS! Esse modo não deu certo! :disappointed:
+```bash
+C:\Users\pamela\Desktop\linguagens-api>heroku login
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/31c7ac6a-4009-4b7d-9692-4997b1b81219?requestor=SFMyNTY.g2gDbQAAAAwxNzcuNzYuMjguMTduBgDoMqg2ggFiAAFRgA.t3g_Kd5ml5BnsyoYWY1RYUP2xmVJ9pif-3LUInFMC0k
+heroku: Waiting for login... -
+```
 
-Conforme outra intrução do site [Heroku](https://devcenter.heroku.com/articles/heroku-cli), vamos seguir de outra maneira.
+![image](https://user-images.githubusercontent.com/108991648/180850939-eecd28dd-b1d5-47b9-9b76-db88ba2be412.png)
 
-![image](https://user-images.githubusercontent.com/108991648/180833826-2fa2e61f-a058-415e-b36f-72920dfae7d5.png)
+Conforme instruções do site do [Heroku CLI](https://dashboard.heroku.com/apps/pamela-linguagens-api/deploy/heroku-git), segunda parte:
 
-Vamos tentar!
+![image](https://user-images.githubusercontent.com/108991648/180851436-4d828091-7006-4942-91c6-081c8e4f8411.png)
+
+Além de seguir as instruções acima, rodaremos outros comandos também:
+
+- [x] Rodar `git init `
+- [x] Rodar `git add .`
+- [x] Rodar `git commit -m "mensagem opcional"` 
+
+Acima vamos incluir todos os diretórios no Heroku, abaixo vamos configurar o repositório remoto
+
+- [x] `$ heroku git:remote -a pamela-linguagens-api` nome do projeto
+
+```bash
+C:\Users\pamela\Desktop\linguagens-api> heroku git:remote -a pamela-linguagens-api
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+set git remote heroku to https://git.heroku.com/pamela-linguagens-api.git
+```
+
+O último comando vai gerar um código, temos que jogar este código para o Heroku.
+
+- [x] Rodar `git push heroku master`
+
+As instalações necessárias foram feitas no Heroku.
+
+Em seguida, vamos rodar a url que colocamos no ar,  abrir o arquivo *App.java*:
+
+- [x] alterar `"http://localhost:8080/linguagens"` para ` https://pamela-linguagens-api.herokuapp.com/linguagens`
 
 
+E pronto, a aplicação deve gerar uma figurinha!
+
+#### PostMan adiciona pelo Heroku uma nova liguagem
+
+Em PostMan, vamos incluir uma nova linguagem
+
+- [x] [Repositório no GitHUb](https://github.com/abrahamcalf/programming-languages-logos/tree/master/src) de imagens de programação
+ - [x] Selecionar o arquivo 256x256.png
+ - [x] Abrir a imagem
+ - [x] Clicar na imagem para gerar a url em outra janela
+ - [x] Copiar nova url
+
+ No PostMan, ir em *POST* e alterar a url para: ` https://pamela-linguagens-api.herokuapp.com/linguagens`
+
+ Status 200 OK :smile:
+
+![image](https://user-images.githubusercontent.com/108991648/180867925-3699dde3-4447-44cd-9524-bc7768ab2638.png)
 
 
+Ir em GET e alterar o link para `https://pamela-linguagens-api.herokuapp.com/linguagens`
+
+Status 200 ok :smile:
+![image](https://user-images.githubusercontent.com/108991648/180867777-3284bfd0-d244-4ab0-85fa-2a3deb444699.png)
 
 
-
-### Retornando ao Heroku
-
-
-
-
-
-
-
-
-
-
-
-
-## Instalações e Registros Necessários
-
-
-### Heroku
-
-[x](https://www.heroku.com/)
-
-### Aplicação MongoDB
-
-### Aplicação PostMan
-
-## :alarm_clock: Hora de Codar! :alarm_clock:
 
 _________________
 
 ###### Dica Boa da Alura! 
-[Documentação Sobre Clouud](https://docs.oracle.com/pt-br/iaas/Content/home.htm)
+[Documentação Sobre Cloud](https://docs.oracle.com/pt-br/iaas/Content/home.htm)
 [Como escrever um README incrível no seu Github](https://www.alura.com.br/artigos/escrever-bom-readme)
 
  

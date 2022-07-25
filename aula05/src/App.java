@@ -14,7 +14,7 @@ public class App {
         //String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD-JamesWebbSpaceTelescope.json";
         //ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
 
-        String url = "http://localhost:8080/linguagens";
+        String url = "https://pamela-linguagens-api.herokuapp.com/linguagens";
         ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
 
         var http = new ClienteHttp();
