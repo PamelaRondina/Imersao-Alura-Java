@@ -1,6 +1,8 @@
 Olá, 😉
 
 Sou iniciante no mundo da programação e esse é o meu primeiro projeto realizado em Java. 🌟🚀
+
+🌟⭐ Este projeto ganhou uma [Menção Honrosa Alura](https://www.alura.com.br/imersao-java/projetos)🌟⭐
 ___________
 
 # [Imersão Alura Java](https://www.alura.com.br/imersao-java?version=java2)
